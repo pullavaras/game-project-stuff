@@ -8,7 +8,7 @@ function closePopup(id) {
     document.getElementById(id).style.display = 'none';
 }
 
-// Function to show end game popup, message and scrore
+// function to show end game popup, message and scrore
 function showEndPopup(message, score) {
     document.getElementById('endMessage').innerText = message;
     document.getElementById('finalScore').innerText = 'Lopulliset pisteet: ' + score;
