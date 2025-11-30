@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>popups demo</title>
+    <link rel="stylesheet" href="some-js.js">
+    <script src="some-js.js" defer></script>
+</head>
+<body>
+
+<!-- game starrt/before capitals -->
+<div id="popup1" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Tervetuloa arvaa pääkaupunki-peliin!</h2>
+        <p>Tässä minipelissä arvaat maiden pääkaupunkeja. Peli jatkuu, kunnes olet saanut tarpeeksi pisteitä.</p>
+        <button onclick="closePopup('popup1')">Aloita</button>
+        <button onclick="closePopup('popup1')">Lopeta peli</button>
+    </div>
+</div>
+
+<!-- count game -->
+<div id="popup2" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Valmiina laskemaan?</h2>
+        <p>Tässä minipelissä ratkaisset yksinkertaisia päässälaskuja. Pelissä on aikaraja, pidä kiirrettä!</p>
+        <button onclick="closePopup('popup2')">Aloita</button>
+        <button onclick="closePopup('popup2')">Lopeta peli</button>
+    </div>
+</div>
+
+<!-- word game -->
+<div id="popup3" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Sanapeli!</h2>
+        <p>Muodosta suomenkielisiä sanoja arvotuista kirjaimista. Sadalla pisteellä voittaa pelin!</p>
+        <button onclick="closePopup('popup3')">Aloita</button>
+        <button onclick="closePopup('popup3')">Lopeta peli</button>
+    </div>
+</div>
+
+<!-- end: wind/lose -->
+<div id="popupEnd" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Peli ohi</h2>
+        <p id="endMessage"></p>
+        <p id="finalScore"></p>
+        <button onclick="closePopup('popupEnd')">Lopeta</button>
+    </div>
+</div>
+
+<!-- demo buttons to trigger popups -->
+<h1>Game Demo</h1>
+<button onclick="showPopup('popup1')">Tässä pääkaupunkipeli intro</button>
+<button onclick="showPopup('popup2')">Tässä laskupeli intro</button>
+<button onclick="showPopup('popup3')">Tässä sanapeli intro</button>
+<br/><br/>
+<button onclick="showEndPopup('Onnittelut voitosta!', 250)">Loppu popup voitto</button>
+<button onclick="showEndPopup('Peli loppui, ole hyvä ja yritä uudestaan.', 100)">Loppu popup häviö</button>
+
+</body>
+</html>
